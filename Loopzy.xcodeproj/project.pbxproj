@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7EA02C53B26748E09B0803F3 /* Pods_Loopzy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E603158F158E317374F89FE /* Pods_Loopzy.framework */; };
+		8A4057CAA8CF4EC48CDB231B /* Pods_LoopzyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBB82BF663B29565570346D /* Pods_LoopzyTests.framework */; };
+		D4D08AC367C49193EF691E5B /* Pods_Loopzy_LoopzyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB54FECF614A3E0F3BB6E34 /* Pods_Loopzy_LoopzyUITests.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		47B28EBA2DDE292A0056F7F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +30,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		090FAA2F4417722D2F67CC2A /* Pods-LoopzyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoopzyTests.debug.xcconfig"; path = "Target Support Files/Pods-LoopzyTests/Pods-LoopzyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A66435A3D4ABB0D848D794F /* Pods-LoopzyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoopzyTests.release.xcconfig"; path = "Target Support Files/Pods-LoopzyTests/Pods-LoopzyTests.release.xcconfig"; sourceTree = "<group>"; };
 		47B28EA42DDE29260056F7F4 /* Loopzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loopzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B28EB92DDE292A0056F7F4 /* LoopzyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoopzyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B28EC32DDE292A0056F7F4 /* LoopzyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoopzyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FBB82BF663B29565570346D /* Pods_LoopzyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoopzyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E603158F158E317374F89FE /* Pods_Loopzy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loopzy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FB54FECF614A3E0F3BB6E34 /* Pods_Loopzy_LoopzyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loopzy_LoopzyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2C4A2F698F2DD37944482ED /* Pods-Loopzy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loopzy.release.xcconfig"; path = "Target Support Files/Pods-Loopzy/Pods-Loopzy.release.xcconfig"; sourceTree = "<group>"; };
+		B071F42096CD853A1044FA61 /* Pods-Loopzy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loopzy.debug.xcconfig"; path = "Target Support Files/Pods-Loopzy/Pods-Loopzy.debug.xcconfig"; sourceTree = "<group>"; };
+		CD6FF4FFAEFBB4458F963E5B /* Pods-Loopzy-LoopzyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loopzy-LoopzyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Loopzy-LoopzyUITests/Pods-Loopzy-LoopzyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF7A095802502D138D900DBD /* Pods-Loopzy-LoopzyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loopzy-LoopzyUITests.release.xcconfig"; path = "Target Support Files/Pods-Loopzy-LoopzyUITests/Pods-Loopzy-LoopzyUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EA02C53B26748E09B0803F3 /* Pods_Loopzy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4057CAA8CF4EC48CDB231B /* Pods_LoopzyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +83,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D08AC367C49193EF691E5B /* Pods_Loopzy_LoopzyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1443BF202684E32A5C9B5BF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E603158F158E317374F89FE /* Pods_Loopzy.framework */,
+				6FB54FECF614A3E0F3BB6E34 /* Pods_Loopzy_LoopzyUITests.framework */,
+				4FBB82BF663B29565570346D /* Pods_LoopzyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		47B28E9B2DDE29250056F7F4 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +107,8 @@
 				47B28EBC2DDE292A0056F7F4 /* LoopzyTests */,
 				47B28EC62DDE292A0056F7F4 /* LoopzyUITests */,
 				47B28EA52DDE29260056F7F4 /* Products */,
+				975996EED7D626484044D308 /* Pods */,
+				1443BF202684E32A5C9B5BF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +122,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		975996EED7D626484044D308 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B071F42096CD853A1044FA61 /* Pods-Loopzy.debug.xcconfig */,
+				A2C4A2F698F2DD37944482ED /* Pods-Loopzy.release.xcconfig */,
+				CD6FF4FFAEFBB4458F963E5B /* Pods-Loopzy-LoopzyUITests.debug.xcconfig */,
+				EF7A095802502D138D900DBD /* Pods-Loopzy-LoopzyUITests.release.xcconfig */,
+				090FAA2F4417722D2F67CC2A /* Pods-LoopzyTests.debug.xcconfig */,
+				1A66435A3D4ABB0D848D794F /* Pods-LoopzyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,6 +142,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47B28ECD2DDE292A0056F7F4 /* Build configuration list for PBXNativeTarget "Loopzy" */;
 			buildPhases = (
+				158EB9D50707A060C38F71C4 /* [CP] Check Pods Manifest.lock */,
 				47B28EA02DDE29260056F7F4 /* Sources */,
 				47B28EA12DDE29260056F7F4 /* Frameworks */,
 				47B28EA22DDE29260056F7F4 /* Resources */,
@@ -111,8 +155,6 @@
 				47B28EA62DDE29260056F7F4 /* Loopzy */,
 			);
 			name = Loopzy;
-			packageProductDependencies = (
-			);
 			productName = Loopzy;
 			productReference = 47B28EA42DDE29260056F7F4 /* Loopzy.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47B28ED02DDE292A0056F7F4 /* Build configuration list for PBXNativeTarget "LoopzyTests" */;
 			buildPhases = (
+				64FEA6413EB79A5EB9174C91 /* [CP] Check Pods Manifest.lock */,
 				47B28EB52DDE292A0056F7F4 /* Sources */,
 				47B28EB62DDE292A0056F7F4 /* Frameworks */,
 				47B28EB72DDE292A0056F7F4 /* Resources */,
@@ -134,8 +177,6 @@
 				47B28EBC2DDE292A0056F7F4 /* LoopzyTests */,
 			);
 			name = LoopzyTests;
-			packageProductDependencies = (
-			);
 			productName = LoopzyTests;
 			productReference = 47B28EB92DDE292A0056F7F4 /* LoopzyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -144,6 +185,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47B28ED32DDE292A0056F7F4 /* Build configuration list for PBXNativeTarget "LoopzyUITests" */;
 			buildPhases = (
+				7E62E69FE32447886B4358BB /* [CP] Check Pods Manifest.lock */,
 				47B28EBF2DDE292A0056F7F4 /* Sources */,
 				47B28EC02DDE292A0056F7F4 /* Frameworks */,
 				47B28EC12DDE292A0056F7F4 /* Resources */,
@@ -157,8 +199,6 @@
 				47B28EC62DDE292A0056F7F4 /* LoopzyUITests */,
 			);
 			name = LoopzyUITests;
-			packageProductDependencies = (
-			);
 			productName = LoopzyUITests;
 			productReference = 47B28EC32DDE292A0056F7F4 /* LoopzyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -230,6 +270,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		158EB9D50707A060C38F71C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Loopzy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64FEA6413EB79A5EB9174C91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoopzyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E62E69FE32447886B4358BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Loopzy-LoopzyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		47B28EA02DDE29260056F7F4 /* Sources */ = {
@@ -390,6 +499,7 @@
 		};
 		47B28ECE2DDE292A0056F7F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B071F42096CD853A1044FA61 /* Pods-Loopzy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -419,6 +529,7 @@
 		};
 		47B28ECF2DDE292A0056F7F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2C4A2F698F2DD37944482ED /* Pods-Loopzy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,6 +559,7 @@
 		};
 		47B28ED12DDE292A0056F7F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 090FAA2F4417722D2F67CC2A /* Pods-LoopzyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -467,6 +579,7 @@
 		};
 		47B28ED22DDE292A0056F7F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A66435A3D4ABB0D848D794F /* Pods-LoopzyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +599,7 @@
 		};
 		47B28ED42DDE292A0056F7F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD6FF4FFAEFBB4458F963E5B /* Pods-Loopzy-LoopzyUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -503,6 +617,7 @@
 		};
 		47B28ED52DDE292A0056F7F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF7A095802502D138D900DBD /* Pods-Loopzy-LoopzyUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

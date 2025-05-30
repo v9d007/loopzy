@@ -1,0 +1,107 @@
+only_rules:
+  # Error-level rules (will fail the build)
+  - duplicate_imports
+  - empty_parameters
+  - force_try
+  - return_arrow_whitespace
+  - trailing_semicolon
+  - unneeded_break_in_switch
+
+  # Warning-level rules (won't fail the build)
+  - closure_spacing
+  - collection_alignment
+  - comma_spacing
+  - control_statement
+  - empty_count
+  - empty_string
+  - leading_whitespace
+  - legacy_constructor
+  - let_var_whitespace
+  - mark
+  - opening_brace
+  - operator_usage_whitespace
+  - redundant_optional_initialization
+  - redundant_string_enum_value
+  - redundant_void_return
+  - statement_position
+  - trailing_newline
+  - unused_import
+  - unused_optional_binding
+  - vertical_whitespace
+
+excluded:
+  - Carthage
+  - Pods
+  - fastlane
+  - .build
+  - DerivedData
+  - TikTokCloneTests
+  - TikTokCloneUITests
+
+identifier_name:
+  min_length:
+    warning: 2
+  excluded:
+    - id
+    - URL
+    - url
+    - app
+    - me
+    - to
+    - at
+
+reporter: "xcode"
+EOFcat > .swiftlint.yml << 'EOF'
+only_rules:
+  # Error-level rules (will fail the build)
+  - duplicate_imports
+  - empty_parameters
+  - force_try
+  - return_arrow_whitespace
+  - trailing_semicolon
+  - unneeded_break_in_switch
+
+  # Warning-level rules (won't fail the build)
+  - closure_spacing
+  - collection_alignment
+  - comma_spacing
+  - control_statement
+  - empty_count
+  - empty_string
+  - leading_whitespace
+  - legacy_constructor
+  - let_var_whitespace
+  - mark
+  - opening_brace
+  - operator_usage_whitespace
+  - redundant_optional_initialization
+  - redundant_string_enum_value
+  - redundant_void_return
+  - statement_position
+  - trailing_newline
+  - unused_import
+  - unused_optional_binding
+  - vertical_whitespace
+
+excluded:
+  - Carthage
+  - Pods
+  - fastlane
+  - .build
+  - DerivedData
+  - TikTokCloneTests
+  - TikTokCloneUITests
+
+identifier_name:
+  min_length:
+    warning: 2
+  excluded:
+    - id
+    - URL
+    - url
+    - app
+    - me
+    - to
+    - at
+
+reporter: "xcode"
