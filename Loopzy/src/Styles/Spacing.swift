@@ -117,6 +117,13 @@ struct LoopzySpacing {
         static let rowSpacing = LoopzySpacing.xs            // 8pt
         static let sectionSpacing = LoopzySpacing.xl        // 24pt
     }
+    
+    // MARK: - Animation Durations
+    struct Animation {
+        static let short: TimeInterval = 0.2
+        static let medium: TimeInterval = 0.3
+        static let long: TimeInterval = 0.5
+    }
 }
 
 // MARK: - Border Radius Scale
@@ -263,13 +270,6 @@ extension Spacer {
     static var md: some View { height(LoopzySpacing.md) }
     static var lg: some View { height(LoopzySpacing.lg) }
     static var xl: some View { height(LoopzySpacing.xl) }
-}
-
-
-struct Animation {
-    static let short: TimeInterval = 0.2
-    static let medium: TimeInterval = 0.3
-    static let long: TimeInterval = 0.5
 }
 
 // MARK: - Usage Examples and Documentation

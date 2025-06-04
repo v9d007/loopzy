@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// MARK: - Primary Action Buttons
+// MARK: - Primary Action Buttons for Loopzy App
 struct PrimaryButton: View {
     let title: String
     let action: () -> Void
@@ -62,7 +62,7 @@ struct PrimaryButton: View {
     private var foregroundColor: Color {
         switch buttonStyle {
         case .filled:
-            return Color.clear
+            return LoopzyColors.textInverse  // Fixed: was Color.clear
         case .outlined:
             return LoopzyColors.primary
         case .text:
@@ -105,14 +105,6 @@ struct FollowButton: View {
             }
         }
         
-        var fontSize: CGFloat {
-            switch self {
-            case .small: return 12
-            case .medium: return 14
-            case .large: return 16
-            }
-        }
-        
         var padding: CGFloat {
             switch self {
             case .small: return 12
@@ -129,7 +121,7 @@ struct FollowButton: View {
         }) {
             Text(isFollowing ? "Following" : "Follow")
                 .font(LoopzyTypography.Component.button)
-                .foregroundColor(isFollowing ? LoopzyColors.textPrimary : LoopzyColors.textTertiary)
+                .foregroundColor(isFollowing ? LoopzyColors.textPrimary : LoopzyColors.textInverse)
                 .padding(.horizontal, size.padding)
                 .frame(height: size.height)
                 .background(
@@ -153,19 +145,19 @@ struct VideoActionButton: View {
             VStack(spacing: LoopzySpacing.Gap.minimal) {
                 ZStack {
                     Circle()
-                        .fill(LoopzyColors.primary)
+                        .fill(LoopzyColors.overlay)  // Fixed: was LoopzyColors.primary
                         .frame(width: size, height: size)
                     
                     Image(systemName: icon)
                         .font(.system(size: size * 0.45, weight: .medium))
-                        .foregroundColor(isActive ? LoopzyColors.primary : LoopzyColors.primary)
+                        .foregroundColor(isActive ? LoopzyColors.primary : LoopzyColors.textInverse)
                 }
                 
                 if let count = count {
                     Text(count)
                         .font(LoopzyTypography.Label.small)
-                        .foregroundColor(LoopzyColors.textPrimary)
-                        .shadow(color: LoopzyColors.textTertiary, radius: 1, x: 0, y: 1)
+                        .foregroundColor(LoopzyColors.textInverse)
+                        .shadow(color: LoopzyColors.overlay, radius: 1, x: 0, y: 1)
                 }
             }
         }
@@ -182,7 +174,7 @@ struct RecordButton: View {
             ZStack {
                 // Outer ring
                 RoundedRectangle(cornerRadius: LoopzyRadius.medium)
-                    .stroke(LoopzyColors.primary, lineWidth: 4)
+                    .stroke(LoopzyColors.textInverse, lineWidth: 4)  // Fixed: was LoopzyColors.primary
                     .frame(width: 60, height: 44)
                 
                 // Inner content
@@ -192,12 +184,12 @@ struct RecordButton: View {
                     .overlay(
                         Image(systemName: isRecording ? "stop.fill" : "plus")
                             .font(.system(size: 20, weight: .bold))
-                            .foregroundColor(LoopzyColors.primary)
+                            .foregroundColor(LoopzyColors.textInverse)  // Fixed: was LoopzyColors.primary
                     )
             }
         }
         .scaleEffect(isRecording ? 1.1 : 1.0)
-        .animation(.easeInOut(duration: Animation.short), value: isRecording)
+        .animation(.easeInOut(duration: LoopzySpacing.Animation.short), value: isRecording)
     }
 }
 
@@ -225,16 +217,16 @@ struct BackButton: View {
     
     private var foregroundColor: Color {
         switch style {
-        case .dark: return .white
-        case .light: return .black
-        case .transparent: return .white
+        case .dark: return LoopzyColors.textInverse
+        case .light: return LoopzyColors.textPrimary
+        case .transparent: return LoopzyColors.textInverse
         }
     }
     
     private var backgroundColor: Color {
         switch style {
-        case .dark: return .black.opacity(0.5)
-        case .light: return .white.opacity(0.9)
+        case .dark: return LoopzyColors.overlay
+        case .light: return LoopzyColors.surface
         case .transparent: return .clear
         }
     }
@@ -248,11 +240,11 @@ struct CloseButton: View {
         Button(action: action) {
             Image(systemName: "xmark")
                 .font(.system(size: 16, weight: .medium))
-                .foregroundColor(style == .light ? .black : .white)
+                .foregroundColor(style == .light ? LoopzyColors.textPrimary : LoopzyColors.textInverse)
                 .frame(width: 44, height: 44)
                 .background(
                     Circle()
-                        .fill(style == .light ? .white.opacity(0.9) : .black.opacity(0.5))
+                        .fill(style == .light ? LoopzyColors.surface : LoopzyColors.overlay)
                 )
         }
     }
@@ -265,7 +257,7 @@ struct IconButton: View {
     var size: CGFloat = 44
     var iconSize: CGFloat = 20
     var backgroundColor: Color = .clear
-    var foregroundColor: Color = .white
+    var foregroundColor: Color = LoopzyColors.textInverse
     
     var body: some View {
         Button(action: action) {
@@ -289,11 +281,11 @@ struct ShareButton: View {
         Button(action: action) {
             Image(systemName: "arrowshape.turn.up.right.fill")
                 .font(.system(size: 20, weight: .medium))
-                .foregroundColor(.white)
+                .foregroundColor(LoopzyColors.textInverse)
                 .frame(width: 44, height: 44)
                 .background(
                     Circle()
-                        .fill(.black.opacity(0.3))
+                        .fill(LoopzyColors.overlay)
                 )
         }
     }

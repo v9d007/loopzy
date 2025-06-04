@@ -41,95 +41,39 @@ struct LoopzyApp: App {
 
 struct ContentView: View {
     @EnvironmentObject private var coordinator: AppCoordinator
+    @EnvironmentObject private var router: AppRouter
     
     var body: some View {
         Group {
             if coordinator.isAuthenticated {
                 MainTabView()
             } else {
-                AuthView()
+                NavigationStack(path: $router.navigationPath) {
+                    AuthView()
+                        .navigationDestination(for: AppRoute.self) { route in
+                            destinationView(for: route)
+                        }
+                }
             }
         }
         .animation(.easeInOut, value: coordinator.isAuthenticated)
     }
-}
-
-struct AuthView: View {
-    @EnvironmentObject private var router: AppRouter
-    @EnvironmentObject private var coordinator: AppCoordinator
     
-    // Simulating login for demo purposes
-    @State private var email = ""
-    @State private var password = ""
-    
-    var body: some View {
-        NavigationStack(path: $router.navigationPath) {
-            VStack(spacing: 20) {
-                Image(systemName: "infinity")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 100)
-                    .foregroundColor(.purple)
-                
-                Text("Welcome to Loopzy")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                
-                TextField("Email", text: $email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .autocapitalization(.none)
-                    .keyboardType(.emailAddress)
-                
-                SecureField("Password", text: $password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                Button(action: {
-                    // Simulate login
-                    withAnimation {
-                        coordinator.isAuthenticated = true
-                    }
-                }) {
-                    Text("Sign In")
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.purple)
-                        .cornerRadius(10)
-                }
-                
-                HStack {
-                    Button("Forgot Password?") {
-                        router.navigate(to: .auth(.forgotPassword))
-                    }
-                    .foregroundColor(.purple)
-                    
-                    Spacer()
-                    
-                    Button("Sign Up") {
-                        router.navigate(to: .auth(.signup))
-                    }
-                    .foregroundColor(.purple)
-                }
-                
-                Spacer()
+    @ViewBuilder
+    private func destinationView(for route: AppRoute) -> some View {
+        switch route {
+        case .auth(let authRoute):
+            switch authRoute {
+            case .login:
+                EmptyView()
+            case .signup:
+                SignupView()
+            case .forgotPassword:
+                ForgotPasswordView()
             }
-            .padding()
-            .navigationDestination(for: AppRoute.self) { route in
-                switch route {
-                case .auth(let authRoute):
-                    switch authRoute {
-                    case .login:
-                        Text("Login") // Should not happen here
-                    case .signup:
-                        SignupView()
-                    case .forgotPassword:
-                        ForgotPasswordView()
-                    }
-                case .main:
-                    Text("Main") // Should not happen in auth flow
-                }
-            }
+        case .main:
+            EmptyView() // Should not happen in auth flow
         }
     }
 }
+

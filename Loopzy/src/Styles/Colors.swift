@@ -1,49 +1,13 @@
 import SwiftUI
 
-// MARK: - Color Extensions
-extension Color {
-    // MARK: - Brand Colors
-    static let loopzyPrimary = Color("LoopzyPrimary")
-    static let loopzySecondary = Color("LoopzySecondary")
-    static let loopzyAccent = Color("LoopzyAccent")
-    
-    // MARK: - UI Colors
-    static let loopzyBackground = Color("LoopzyBackground")
-    static let loopzySurface = Color("LoopzySurface")
-    static let loopzyCard = Color("LoopzyCard")
-    
-    // MARK: - Text Colors
-    static let loopzyTextPrimary = Color("LoopzyTextPrimary")
-    static let loopzyTextSecondary = Color("LoopzyTextSecondary")
-    static let loopzyTextTertiary = Color("LoopzyTextTertiary")
-    static let loopzyTextInverse = Color("LoopzyTextInverse")
-    
-    // MARK: - Status Colors
-    static let loopzySuccess = Color("LoopzySuccess")
-    static let loopzyWarning = Color("LoopzyWarning")
-    static let loopzyError = Color("LoopzyError")
-    static let loopzyInfo = Color("LoopzyInfo")
-    
-    // MARK: - Interactive Colors
-    static let loopzyInteractive = Color("LoopzyInteractive")
-    static let loopzyInteractivePressed = Color("LoopzyInteractivePressed")
-    static let loopzyInteractiveDisabled = Color("LoopzyInteractiveDisabled")
-    
-    // MARK: - Gradient Colors
-    static let loopzyGradientStart = Color("LoopzyGradientStart")
-    static let loopzyGradientEnd = Color("LoopzyGradientEnd")
-    
-    // MARK: - Social Media Colors
-    static let loopzyLike = Color("LoopzyLike")
-    static let loopzyShare = Color("LoopzyShare")
-    static let loopzyComment = Color("LoopzyComment")
-    
-    // MARK: - Overlay Colors
-    static let loopzyOverlay = Color("LoopzyOverlay")
-    static let loopzyOverlayLight = Color("LoopzyOverlayLight")
-}
+// MARK: - Remove manual color declarations, use auto-generated ones from Assets.xcassets
+// The auto-generated file already provides:
+// - Color.loopzyPrimary
+// - Color.loopzySecondary
+// - Color.loopzyTextInverse
+// - etc.
 
-// MARK: - Color Scheme Support
+// MARK: - Keep only the adaptive color functions and LoopzyColors struct
 extension Color {
     static func adaptive(light: Color, dark: Color) -> Color {
         return Color(UIColor { traitCollection in
@@ -57,14 +21,14 @@ extension Color {
     }
 }
 
-// MARK: - Common Color Combinations
+// MARK: - Color Combinations (Reference auto-generated colors)
 struct LoopzyColors {
-    // MARK: - Primary Palette
+    // MARK: - Primary Palette (Use auto-generated colors)
     static let primary = Color.loopzyPrimary
     static let secondary = Color.loopzySecondary
     static let accent = Color.loopzyAccent
     
-    // MARK: - Background Palette
+    // MARK: - Background Palette (Custom adaptive colors)
     static let background = Color.adaptive(
         light: Color.white,
         dark: Color.black
@@ -96,18 +60,23 @@ struct LoopzyColors {
         dark: Color.gray.opacity(0.6)
     )
     
+    // MARK: - Use auto-generated colors
+    static let textInverse = Color.loopzyTextInverse    
+    static let overlay = Color.loopzyOverlay            
+    static let overlayLight = Color.loopzyOverlayLight  
+    
     // MARK: - Interactive States
-    static let interactive = Color.loopzyPrimary
-    static let interactivePressed = Color.loopzyPrimary.opacity(0.8)
-    static let interactiveDisabled = Color.gray.opacity(0.3)
+    static let interactive = Color.loopzyInteractive           
+    static let interactivePressed = Color.loopzyInteractivePressed  
+    static let interactiveDisabled = Color.loopzyInteractiveDisabled 
     
     // MARK: - Status Colors
-    static let success = Color.green
-    static let warning = Color.orange
-    static let error = Color.red
-    static let info = Color.blue
+    static let success = Color.loopzySuccess    
+    static let warning = Color.loopzyWarning    
+    static let error = Color.loopzyError        
+    static let info = Color.loopzyInfo          
     
-    // MARK: - Gradients
+    // MARK: - Gradients (Use auto-generated colors)
     static let primaryGradient = LinearGradient(
         colors: [Color.loopzyGradientStart, Color.loopzyGradientEnd],
         startPoint: .topLeading,
@@ -126,33 +95,69 @@ struct LoopzyColors {
     static let playerProgress = Color.loopzyPrimary
 }
 
-// MARK: - Usage Examples and Documentation
+// SOLUTION 2: ALTERNATIVE - DISABLE AUTO-GENERATION (NOT RECOMMENDED)
 /*
- Usage Examples:
- 
- // Using direct colors
- Text("Hello")
-     .foregroundColor(.loopzyTextPrimary)
-     .background(.loopzySurface)
- 
- // Using color combinations
- Button("Action") { }
-     .foregroundColor(LoopzyColors.textPrimary)
-     .background(LoopzyColors.primary)
- 
- // Using gradients
- Rectangle()
-     .fill(LoopzyColors.primaryGradient)
- 
- // Using adaptive colors
- VStack {
-     Text("Content")
- }
- .background(LoopzyColors.background)
- 
- Color Asset Configuration in Assets.xcassets:
- - Create a Color Set named "LoopzyPrimary"
- - Set Light Appearance: Purple (#8B5CF6)
- - Set Dark Appearance: Purple (#A78BFA)
- - Repeat for all brand colors
- */
+If you want to keep manual declarations:
+1. Select your color assets in Assets.xcassets
+2. In Attributes Inspector, uncheck "Provides Namespace"
+3. Clean build folder and rebuild
+
+But Solution 1 is better because auto-generated colors are more efficient.
+*/
+
+// WHAT THE AUTO-GENERATED FILE PROVIDES:
+
+/*
+✅ Color.loopzyPrimary
+✅ Color.loopzySecondary
+✅ Color.loopzyAccent
+✅ Color.loopzyBackground
+✅ Color.loopzySurface
+✅ Color.loopzyCard
+✅ Color.loopzyTextPrimary
+✅ Color.loopzyTextSecondary
+✅ Color.loopzyTextTertiary
+✅ Color.loopzyTextInverse
+✅ Color.loopzySuccess
+✅ Color.loopzyWarning
+✅ Color.loopzyError
+✅ Color.loopzyInfo
+✅ Color.loopzyInteractive
+✅ Color.loopzyInteractivePressed
+✅ Color.loopzyInteractiveDisabled
+✅ Color.loopzyGradientStart
+✅ Color.loopzyGradientEnd
+✅ Color.loopzyLike
+✅ Color.loopzyShare
+✅ Color.loopzyComment
+✅ Color.loopzyOverlay
+✅ Color.loopzyOverlayLight
+*/
+
+// UPDATED COMPONENT USAGE:
+
+// Your components can now use either:
+// 1. Direct auto-generated colors: Color.loopzyPrimary
+// 2. LoopzyColors combinations: LoopzyColors.primary
+
+// Example in PrimaryButton:
+/*
+struct PrimaryButton: View {
+    var body: some View {
+        Button("Test") {}
+            .foregroundColor(.loopzyTextInverse)    // Direct auto-generated
+            .background(LoopzyColors.primary)       // Or via LoopzyColors
+    }
+}
+*/
+
+// BENEFITS OF AUTO-GENERATED APPROACH:
+
+/*
+✅ No duplicate declarations
+✅ Automatic light/dark mode support from Assets.xcassets
+✅ Type-safe color access
+✅ Better performance
+✅ Xcode tooling integration
+✅ No manual Color("ColorName") calls needed
+*/

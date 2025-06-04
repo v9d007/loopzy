@@ -48,7 +48,7 @@ struct SignupView: View {
                             .font(.title)
                             .fontWeight(.bold)
                         
-                        Text("Create your account and start sharing")
+                        Text("Create your account and enjoy the world of entertainment")
                             .font(.subheadline)
                             .foregroundColor(.gray)
                             .multilineTextAlignment(.center)
